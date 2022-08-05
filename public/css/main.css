@@ -1,11 +1,14 @@
-* {
-    font-family: Courier New, Times, "Times New Roman", serif;
-}
 body {
-    background: blanchedalmond;
+    background: rgb(255,235,205);
 }
 
-ul {
+#nameTitle {
+    text-align: center;
+    font-size: 32px;
+}
+
+#nav-ul {
+    font-family: Courier New, Times, "Times New Roman", serif;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -13,11 +16,11 @@ ul {
     background-color: #333;
 }
   
-li {
+.nav {
     float: left;
 }
 
-li a {
+.nav-bar {
     display: block;
     color: white;
     text-align: center;
@@ -25,10 +28,44 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
+.nav-bar:hover {
     background-color: #111;
 }
 
 .active {
     background-color: #04AA6D;
+}
+
+.title-animation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.intro-wrapper {
+    display: inline-flex;
+}
+.dynamic-text li {
+    font-family: "Poppins", sans-serif;
+    list-style: none;
+    font-size: 45px;
+    font-weight: 500;
+}
+.dynamic-text li span {
+    position: relative;
+}
+.dynamic-text li span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(255,235,205);
+    border-left: 2px solid;
+    animation: typing 1.5s steps(15) infinite;
+}
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
 }
